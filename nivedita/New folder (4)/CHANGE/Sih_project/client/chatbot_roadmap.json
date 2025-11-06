@@ -1,0 +1,112 @@
+{
+  "Becoming a Data Scientist": [
+    {
+      "title": "Step 1",
+      "advice": "Learn Python, R, SQL, and statistics fundamentals."
+    },
+    {
+      "title": "Step 2",
+      "advice": "Familiarize yourself with data visualization tools like Tableau or Power BI."
+    },
+    {
+      "title": "Step 3",
+      "advice": "Dive into machine learning algorithms and programming frameworks like scikit-learn or TensorFlow."
+    },
+    {
+      "title": "Step 4",
+      "advice": "Practice with real-world datasets on Kaggle or Data.gov."
+    },
+    {
+      "title": "Step 5",
+      "advice": "Develop expertise in a specific domain, such as natural language processing or computer vision."
+    },
+    {
+      "title": "Step 6",
+      "advice": "Build a portfolio of projects showcasing your skills to potential employers."
+    }
+  ],
+  "Read, Httpconnectionpool, Contacting, Localhost": [
+    {
+      "title": "Roadmap Details",
+      "advice": "[ERROR contacting Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)]"
+    }
+  ],
+  "Nstep, Classification, Certifications, Reinforcement": [
+    {
+      "title": "Step 1",
+      "advice": "{\n  \"title\": \"Web Dev to ML Roadmap\",\n  \"advice\": \"Step 1: Learn Python and TensorFlow/PyTorch fundamentals\\nStep 2: Study supervised & unsupervised learning, regression & classification\\nStep 3: Implement neural networks from scratch & experiment with datasets\\nStep 4: Explore computer vision, natural language processing, & reinforcement learning\\nStep 5: Practice Kaggle competitions & work on personal projects\\nStep 6: Prepare for ML certifications (e.g. Coursera, edX) & stay updated with industry trends\""
+    }
+  ],
+  "Nstep, Tensorflow, Nlearn, Hyperparameter": [
+    {
+      "title": "Step 1",
+      "advice": "{\n  \"title\": \"From Web Dev to ML\",\n  \"advice\": \"Step 1: Learn Python, NumPy, and Pandas for data manipulation.\\nLearn scikit-learn library basics for supervised learning.\\nStep 2: Dive into unsupervised learning with K-Means clustering.\\nExplore neural networks using TensorFlow or PyTorch.\\nStep 3: Practice with Kaggle datasets and competitions.\\nWork on personal projects incorporating ML.\\nStep 4: Study deep learning techniques and CNNs.\\nLearn about model evaluation and hyperparameter tuning.\\nStep 5: Prepare for a career in ML, focusing on documentation and communication skills.\\nJoin online communities and attend industry events to network.\\nStep 6: Pursue certifications (e.g., TensorFlow Certified Developer) or further education.\\nStay updated with the latest ML trends and technologies.\""
+    }
+  ],
+  "Nstep, Music, Practice, Find": [
+    {
+      "title": "Step 1",
+      "advice": "{\n  \"title\": \"Becoming a Musician\",\n  \"advice\": \"Step 1: Learn to read music and understand music theory.\\nStep 2: Find an instrument to play and take regular lessons to improve skills.\\nStep 3: Practice playing regularly, focusing on technique and musicality.\\nStep 4: Join a band or find like-minded musicians for collaborative practice.\\nStep 5: Record yourself and produce high-quality music demos.\\nStep 6: Network with industry professionals, attend gigs and concerts.\\nStep 7: Develop a unique sound and style through experimentation and innovation.\\nStep 8: Create a strong online presence (website, social media).\\nStep 9: Prepare for a career in music by setting clear goals and making a business plan.\""
+    }
+  ],
+  "Nstep, Flight, Pilot, Hours": [
+    {
+      "title": "Step 1",
+      "advice": "Earn a high school diploma or equivalent, as most pilot programs require a strong foundation in math and science.\\nStep 2: Research and choose a flight school accredited by the Federal Aviation Administration (FAA).\\nStep 3: Obtain a private pilot's license, which requires at least 40 hours of flight time and passing a written exam.\\nStep 4: Accumulate more flight experience and consider obtaining an instrument rating for higher pay and better job prospects.\\nStep 5: Pursue a commercial pilot's license, requiring a minimum of 250 hours of flight time and a multi-engine rating.\\nStep 6: Build hours as a first officer or in a flying instructor role to increase chances of becoming a captain.\\nStep 7: Stay up-to-date with recurrent training and maintain an airman medical certificate.\\nStep 8: Network and join professional organizations, such as the Air Line Pilots Association (ALPA), to advance your career.\""
+    }
+  ],
+  "Nstep, Dance, Dancers, Choreographers": [
+    {
+      "title": "Roadmap Details",
+      "advice": "{\n  \"title\": \"Becoming a Dancer\",\n  \"advice\": \"Step 1: Take your first dance class and get comfortable with basic movements.\\nStep 2: Practice regularly, even if it's just for a few minutes each day.\\nStep 3: Learn various styles such as ballet, contemporary, or jazz.\\nStep 4: Watch professional dancers perform and study their technique.\\nStep 5: Join a dance company or troupe to gain performance experience.\\nStep 6: Consider pursuing formal dance training at a college or conservatory.\\nStep 7: Create a strong online presence through social media and website.\\nStep 8: Network with other dancers, choreographers, and directors in the industry.\\nStep 9: Continuously work on perfecting your craft and staying inspired.\""
+    }
+  ],
+  "Nstep, Science, Through, Cybersecurity": [
+    {
+      "title": "{\n  \"title\"",
+      "advice": "\"Computer Science Career Paths Roadmap\",\n  \"advice\": \""
+    },
+    {
+      "title": "Step 1",
+      "advice": "Explore in-demand areas such as artificial intelligence, data science, and cybersecurity.\\n"
+    },
+    {
+      "title": "Step 2",
+      "advice": "Develop a strong foundation in programming languages like Python, Java, or C++.\\n"
+    },
+    {
+      "title": "Step 3",
+      "advice": "Consider pursuing a master's degree for specialized fields or leadership roles.\\n"
+    },
+    {
+      "title": "Step 4",
+      "advice": "Network with professionals in your desired field through events, conferences, or online communities.\\n"
+    },
+    {
+      "title": "Step 5",
+      "advice": "Stay up-to-date with industry trends and technologies through continuous learning and certification programs.\""
+    }
+  ],
+  "Science Study Roadmap": [
+    {
+      "title": "Step 1",
+      "advice": "Start by reviewing the basics of science, including biology, chemistry, physics, and mathematics."
+    },
+    {
+      "title": "Step 2",
+      "advice": "Identify your goals and focus on one area at a time, such as preparing for a specific exam or learning about a particular topic."
+    },
+    {
+      "title": "Step 3",
+      "advice": "Create a study schedule and stick to it, setting aside dedicated time each day or week to review material."
+    },
+    {
+      "title": "Step 4",
+      "advice": "Use active learning techniques, such as making flashcards, creating concept maps, or summarizing notes in your own words."
+    },
+    {
+      "title": "Step 5",
+      "advice": "Practice problems and past exams to reinforce understanding and build confidence."
+    }
+  ]
+}

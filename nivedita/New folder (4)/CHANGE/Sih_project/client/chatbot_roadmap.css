@@ -1,0 +1,97 @@
+/* General styles for the roadmap steps section */
+main.container {
+     background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.roadmap-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.roadmap-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.roadmap-selector {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.roadmap-selector label {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+#roadmapSelect {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    min-width: 300px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px; /* Ensure icon has a consistent size */
+    line-height: 1; /* Align icon vertically */
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+#roadmapTitle {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.step {
+    background-color:rgb(176, 237, 170);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.step-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    background-color: #eee;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.step-content p {
+    margin-bottom: 0;
+    color: #666;
+}

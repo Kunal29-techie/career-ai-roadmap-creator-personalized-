@@ -1,0 +1,23 @@
+{
+  "guest": [
+    {
+      "title": "Step 1",
+      "advice": "[ERROR contacting Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)]"
+    }
+  ],
+  "kushaF": [
+    {
+      "title": "Step 1",
+      "advice": "[ERROR contacting Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)]"
+    }
+  ],
+  "Halwa": {
+    "title": "Nstep, Pilot, Training, Aircraft",
+    "steps": [
+      {
+        "step": "Step 1",
+        "content": "{\n  \"title\": \"Become a Pilot\",\n  \"advice\": \"Step 1: Meet basic requirements (age, education, medical)\\nGet an FAA medical certificate\\nStep 2: Find a flight school and program\\nEnroll in a certified pilot training program\\nStep 3: Learn aircraft systems and safety procedures\\nComplete ground school and simulator training\\nStep 4: Log flight hours and build experience\\nTrain in a variety of aircraft types\\nStep 5: Pass the FAA written exam\\nTake a commercial pilot license (CPL) course\\nStep 6: Build instrument rating skills\\nTrain for IFR flying and instrument training\\nStep 7: Gain multi-engine rating experience\\nTrain on twin-engine aircraft\\nStep 8: Practice cross-country flying\\nFly to various airports and routes\\nStep 9: Prepare for the ATP exam\\nStudy for and take the Airline Transport Pilot (ATP) test\\nStep 10: Build a pilot resume and apply for jobs\\nNetwork with other pilots and airlines\""
+      }
+    ]
+  }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Advisor - CareerQuest</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo">⚡</span>
+                <span class="nav-title">CareerQuest</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="chat.html" class="nav-link active">AI Advisor</a></li>
+                <li><a href="roadmaps.html" class="nav-link">Roadmaps</a></li>
+                <li><a href="chatbot_roadmap.html" class="nav-link">Chatbot Roadmap</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chat Container -->
+    <div class="chat-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="container">
+                <div class="chat-header-content">
+                    <div class="advisor-info">
+                        <div class="advisor-avatar">
+                            <span class="advisor-icon">🤖</span>
+                            <div class="status-indicator"></div>
+                        </div>
+                        <div class="advisor-details">
+                            <h1>AI Career Advisor</h1>
+                            <p class="advisor-status">Online • Ready to help</p>
+                        </div>
+                    </div>
+                    <div class="chat-stats">
+                        <div class="stat">
+                            <span class="stat-value">1,247</span>
+                            <span class="stat-label">Questions Answered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">98%</span>
+                            <span class="stat-label">Satisfaction Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="container">
+                <div class="welcome-message">
+                    <div class="message bot-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <div class="message-bubble">
+                                <p>Welcome to CareerQuest! I'm your AI Career Advisor. I'm here to help you navigate your computer science career journey.</p>
+                                <p>You can ask me about:</p>
+                                <ul>
+                                    <li>Career paths in CS and related fields</li>
+                                    <li>Skills needed for specific roles</li>
+                                    <li>Salary expectations and job market trends</li>
+                                    <li>Learning roadmaps and resources</li>
+                                    <li>Interview preparation tips</li>
+                                </ul>
+                                <p>What would you like to know about your CS career?</p>
+                            </div>
+                            <div class="message-time">Just now</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Questions -->
+                <div class="quick-questions">
+                    <h3>Popular Questions</h3>
+                    <div class="questions-grid">
+                        <button class="question-btn" data-question="What career paths are available in computer science?">
+                            <span class="question-icon">🎯</span>
+                            What career paths are available in CS?
+                        </button>
+                        <button class="question-btn" data-question="How do I transition from web development to machine learning?">
+                            <span class="question-icon">🔄</span>
+                            How to transition to ML?
+                        </button>
+                        <button class="question-btn" data-question="What skills do I need to become a data scientist?">
+                            <span class="question-icon">📊</span>
+                            Data scientist skills?
+                        </button>
+                        <button class="question-btn" data-question="What's the average salary for a software engineer?">
+                            <span class="question-icon">💰</span>
+                            Software engineer salary?
+                        </button>
+                        <button class="question-btn" data-question="How do I prepare for technical interviews?">
+                            <span class="question-icon">💼</span>
+                            Interview preparation tips?
+                        </button>
+                        <button class="question-btn" data-question="What programming languages should I learn first?">
+                            <span class="question-icon">💻</span>
+                            Which languages to learn?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input-container">
+            <div class="container">
+                <div class="chat-input-wrapper">
+                    <div class="input-group">
+                        <textarea 
+                            id="messageInput" 
+                            placeholder="Ask me anything about your CS career..."
+                            rows="1"
+                        ></textarea>
+                        <button id="sendButton" class="send-btn" disabled>
+                            <span class="send-icon">📤</span>
+                        </button>
+                    </div>
+                    <div class="input-footer">
+                        <div class="typing-indicator" id="typingIndicator">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="input-hint">
+                            Press Enter to send, Shift + Enter for new line
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+    <script src="/theme.js"></script>
+    <script src="/chat.js"></script>
+</body>
+</html>

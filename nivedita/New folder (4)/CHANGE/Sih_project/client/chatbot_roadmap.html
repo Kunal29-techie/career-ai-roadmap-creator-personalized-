@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Roadmap - CareerQuest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="roadmaps.css">
+    <link rel="stylesheet" href="chatbot_roadmap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo">⚡</span>
+                <span class="nav-title">CareerQuest</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="chat.html" class="nav-link">AI Advisor</a></li>
+                <li><a href="roadmaps.html" class="nav-link">Roadmaps</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="roadmap-header">
+            <h1>Here are the roadmaps you've generated with the AI Advisor.</h1>
+            <p></p>
+        </div>
+
+        <div class="roadmap-selector">
+            <label for="roadmapSelect">Select a Roadmap:</label>
+            <select id="roadmapSelect">
+                <option value="">--Please choose a roadmap--</option>
+            </select>
+            <button id="deleteButton" class="btn btn-danger" title="Delete Roadmap">🗑️</button>
+        </div>
+
+        <div class="roadmap-display">
+            <h2 id="roadmapTitle"></h2>
+            <div class="steps-container" id="stepsContainer">
+                <!-- Roadmap steps will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    <script src="chatbot_roadmap.js"></script>
+</body>
+</html>

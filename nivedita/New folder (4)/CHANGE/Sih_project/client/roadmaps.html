@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Roadmaps - CareerQuest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="roadmaps.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo">⚡</span>
+                <span class="nav-title">CareerQuest</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="chat.html" class="nav-link">AI Advisor</a></li>
+                <li><a href="roadmaps.html" class="nav-link active">Roadmaps</a></li>
+                <li><a href="chatbot_roadmap.html" class="nav-link">Chatbot Roadmap</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="roadmaps-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Learning Roadmaps</h1>
+                <p>Choose your adventure and follow structured paths to achieve your career goals</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Career Paths</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Learning Resources</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Active Learners</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="roadmap-filters">
+        <div class="container">
+            <div class="filter-header">
+                <h2>Find Your Perfect Path</h2>
+                <p>Filter roadmaps by difficulty, duration, and specialization</p>
+            </div>
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Difficulty</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all" data-type="difficulty">All</button>
+                        <button class="filter-btn" data-filter="beginner" data-type="difficulty">Beginner</button>
+                        <button class="filter-btn" data-filter="intermediate" data-type="difficulty">Intermediate</button>
+                        <button class="filter-btn" data-filter="advanced" data-type="difficulty">Advanced</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Duration</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all" data-type="duration">All</button>
+                        <button class="filter-btn" data-filter="short" data-type="duration">3-6 months</button>
+                        <button class="filter-btn" data-filter="medium" data-type="duration">6-12 months</button>
+                        <button class="filter-btn" data-filter="long" data-type="duration">12+ months</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Category</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all" data-type="category">All</button>
+                        <button class="filter-btn" data-filter="development" data-type="category">Development</button>
+                        <button class="filter-btn" data-filter="data" data-type="category">Data Science</button>
+                        <button class="filter-btn" data-filter="security" data-type="category">Security</button>
+                        <button class="filter-btn" data-filter="ai" data-type="category">AI/ML</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmaps Grid -->
+    <section class="roadmaps-grid">
+        <div class="container">
+            <div class="roadmaps-container" id="roadmapsContainer">
+                <!-- Frontend Development -->
+                <div class="roadmap-card" data-difficulty="beginner" data-duration="medium" data-category="development">
+                    <div class="roadmap-header">
+                        <div class="roadmap-icon">🎨</div>
+                        <div class="roadmap-badges">
+                            <span class="badge badge-beginner">Beginner</span>
+                            <span class="badge badge-duration">8 months</span>
+                        </div>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>Master modern web development with React, TypeScript, and responsive design</p>
+                    <div class="roadmap-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">📚</span>
+                            <span>12 modules</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⏱️</span>
+                            <span>240 hours</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <span>6 projects</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">Not Started</span>
+                    </div>
+                    <div class="roadmap-actions">
+                        <a href="careers.html?path=frontend" class="btn btn-primary">Start Journey</a>
+                        <button class="btn btn-outline preview-btn" data-roadmap="frontend">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Backend Development -->
+                <div class="roadmap-card" data-difficulty="intermediate" data-duration="medium" data-category="development">
+                    <div class="roadmap-header">
+                        <div class="roadmap-icon">⚙️</div>
+                        <div class="roadmap-badges">
+                            <span class="badge badge-intermediate">Intermediate</span>
+                            <span class="badge badge-duration">10 months</span>
+                        </div>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Build scalable server-side applications with Node.js, databases, and cloud services</p>
+                    <div class="roadmap-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">📚</span>
+                            <span>15 modules</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⏱️</span>
+                            <span>300 hours</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <span>8 projects</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                        <span class="progress-text">25% Complete</span>
+                    </div>
+                    <div class="roadmap-actions">
+                        <a href="careers.html?path=backend" class="btn btn-primary">Continue</a>
+                        <button class="btn btn-outline preview-btn" data-roadmap="backend">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div class="roadmap-card" data-difficulty="intermediate" data-duration="long" data-category="data">
+                    <div class="roadmap-header">
+                        <div class="roadmap-icon">📊</div>
+                        <div class="roadmap-badges">
+                            <span class="badge badge-intermediate">Intermediate</span>
+                            <span class="badge badge-duration">14 months</span>
+                        </div>
+                    </div>
+                    <h3>Data Science</h3>
+                    <p>Analyze data, build predictive models, and extract insights using Python and ML</p>
+                    <div class="roadmap-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">📚</span>
+                            <span>18 modules</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⏱️</span>
+                            <span>420 hours</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <span>10 projects</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">Not Started</span>
+                    </div>
+                    <div class="roadmap-actions">
+                        <a href="careers.html?path=data-science" class="btn btn-primary">Start Journey</a>
+                        <button class="btn btn-outline preview-btn" data-roadmap="data-science">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Machine Learning -->
+                <div class="roadmap-card" data-difficulty="advanced" data-duration="long" data-category="ai">
+                    <div class="roadmap-header">
+                        <div class="roadmap-icon">🤖</div>
+                        <div class="roadmap-badges">
+                            <span class="badge badge-advanced">Advanced</span>
+                            <span class="badge badge-duration">16 months</span>
+                        </div>
+                    </div>
+                    <h3>Machine Learning Engineer</h3>
+                    <p>Design and deploy ML systems, from model training to production deployment</p>
+                    <div class="roadmap-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">📚</span>
+                            <span>20 modules</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⏱️</span>
+                            <span>480 hours</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <span>12 projects</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <span class="progress-text">60% Complete</span>
+                    </div>
+                    <div class="roadmap-actions">
+                        <a href="careers.html?path=ml-engineer" class="btn btn-primary">Continue</a>
+                        <button class="btn btn-outline preview-btn" data-roadmap="ml-engineer">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="roadmap-card" data-difficulty="intermediate" data-duration="medium" data-category="security">
+                    <div class="roadmap-header">
+                        <div class="roadmap-icon">🔒</div>
+                        <div class="roadmap-badges">
+                            <span class="badge badge-intermediate">Intermediate</span>
+                            <span class="badge badge-duration">12 months</span>
+                        </div>
+                    </div>
+                    <h3>Cybersecurity Specialist</h3>
+                    <p>Protect systems and data from cyber threats with ethical hacking and security analysis</p>
+                    <div class="roadmap-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">📚</span>
+                            <span>16 modules</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⏱️</span>
+                            <span>360 hours</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <span>9 projects</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">Not Started</span>
+                    </div>
+                    <div class="roadmap-actions">
+                        <a href="careers.html?path=cybersecurity" class="btn btn-primary">Start Journey</a>
+                        <button class="btn btn-outline preview-btn" data-roadmap="cybersecurity">Preview</button>
+                    </div>
+                </div>
+
+                <!-- Mobile Development -->
+                <div class="roadmap-card" data-difficulty="beginner" data-duration="short" data-category="development">
+                    <div class="roadmap-header">
+                        <div class="roadmap-icon">📱</div>
+                        <div class="roadmap-badges">
+                            <span class="badge badge-beginner">Beginner</span>
+                            <span class="badge badge-duration">6 months</span>
+                        </div>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>Create native and cross-platform mobile apps for iOS and Android</p>
+                    <div class="roadmap-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">📚</span>
+                            <span>10 modules</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⏱️</span>
+                            <span>180 hours</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <span>5 projects</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">Not Started</span>
+                    </div>
+                    <div class="roadmap-actions">
+                        <a href="careers.html?path=mobile" class="btn btn-primary">Start Journey</a>
+                        <button class="btn btn-outline preview-btn" data-roadmap="mobile">Preview</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Preview Modal -->
+    <div class="modal-overlay" id="previewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Roadmap Preview</h3>
+                <button class="modal-close" id="modalClose">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="modalClose2">Close</button>
+                <a href="#" class="btn btn-primary" id="modalStart">Start This Roadmap</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    <script src="roadmaps.js"></script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #10b981;
+  --primary-dark: #059669;
+  --accent: #f59e0b;
+  --background: #ffffff;
+  --foreground: #1f2937;
+  --muted: #f9fafb;
+  --muted-foreground: #6b7280;
+  --border: #e5e7eb;
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #374151;
+}
+
+/* Pixel Font + Rendering */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  image-rendering: pixelated;
+  font-family: "Press Start 2P", system-ui, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--foreground);
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+/* Restore readable fonts for paragraphs */
+p, .hero-description, .testimonial-content {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- PIXEL STYLE OVERLAY --- */
+button, .btn, .nav-link, .feature-card, .testimonial-card, .hero-badge, .cta, input, textarea {
+  border-radius: 0;
+  image-rendering: pixelated;
+  border: 2px solid #000;
+  box-shadow: 3px 3px 0px #00000055;
+  transition: all 0.15s ease;
+}
+
+button:hover, .btn:hover, .nav-link:hover, .feature-card:hover, .testimonial-card:hover {
+  box-shadow: 1px 1px 0px #000;
+  transform: translate(2px, 2px);
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 3px solid #000;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #0002;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(https://img.craftpix.net/2023/04/Free-Nature-Backgrounds-Pixel-Art6.png) center/cover no-repeat;
+  image-rendering: pixelated;
+  height: 100vh;
+  overflow: hidden;
+  border-bottom: 4px solid #000;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: #fff8dc;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px #000;
+  animation: bounceIn 1s ease-out 0.5s both;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 0 #000;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #d6d6d6;
+  text-shadow: 1px 1px #000;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Pixel Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  border: 3px solid #000;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 3px 3px 0 #000;
+  text-transform: uppercase;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 10px;
+  transition: 0.15s;
+}
+
+.btn-primary {
+  background: #00c16a;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #00a85a;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+.btn-outline {
+  background: #fff;
+  color: #000;
+}
+
+.btn-outline:hover {
+  background: #facc15;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-light:hover {
+  background: #fff;
+  color: #000;
+  transform: translate(2px, 2px);
+}
+
+/* Features Section */
+.features {
+  padding: 5rem 0;
+  background: #fefefe;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000;
+  text-shadow: 1px 1px #555;
+}
+
+.section-header p {
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card, .testimonial-card {
+  background: #fff8e7;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover, .testimonial-card:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.feature-card p {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.feature-link {
+  color: #000;
+  text-decoration: none;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #999;
+}
+
+.feature-link:hover {
+  color: var(--primary-dark);
+}
+
+/* Stats Section */
+.stats {
+  padding: 4rem 0;
+  background: #f0f0f0;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00a85a;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 5rem 0;
+  background: #fefefe;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+}
+
+.testimonial-content {
+  color: #333;
+  font-style: italic;
+}
+
+/* CTA Section */
+.cta {
+  padding: 5rem 0;
+  background: #00c16a;
+  color: #fff;
+  text-align: center;
+  border-top: 4px solid #000;
+}
+
+.cta-content h2 {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px #000;
+}
+
+.cta p {
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .features-grid, .testimonials-grid, .cta-buttons {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+}

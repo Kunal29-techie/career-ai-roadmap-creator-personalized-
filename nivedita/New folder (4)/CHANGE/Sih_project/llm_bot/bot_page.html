@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerPath Pro | AI-Powered Career Guidance</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4361ee;
+      --secondary: #3a0ca3;
+      --accent: #f72585;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --success: #4cc9f0;
+      --warning: #ffd166;
+      --danger: #ef476f;
+      --gray: #6c757d;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      padding: 20px 0;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      transform: rotate(30deg);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-icon {
+      font-size: 2.5rem;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .logo h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    .user-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .user-avatar {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .user-avatar:hover {
+      transform: rotate(15deg);
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      padding: 25px;
+      margin-bottom: 25px;
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 12px;
+      background: var(--light);
+      font-size: 1rem;
+      transition: var(--transition);
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3);
+    }
+
+    .btn {
+      padding: 15px 25px;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+    }
+
+    .btn-danger {
+      background: var(--danger);
+      color: white;
+    }
+
+    .btn-danger:hover {
+      background: #d8345f;
+      transform: translateY(-2px);
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: white;
+    }
+
+    .btn-success:hover {
+      background: #3bb5db;
+      transform: translateY(-2px);
+    }
+
+    #chat {
+      height: 300px;
+      overflow-y: auto;
+      padding: 20px;
+      background: var(--light);
+      border-radius: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .msg {
+      max-width: 80%;
+      padding: 15px 20px;
+      border-radius: 18px;
+      position: relative;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .user {
+      background: var(--primary);
+      color: white;
+      align-self: flex-end;
+      border-bottom-right-radius: 5px;
+    }
+
+    .bot {
+      background: white;
+      color: var(--dark);
+      align-self: flex-start;
+      border-bottom-left-radius: 5px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .typing-indicator {
+      display: none;
+      background: white;
+      padding: 15px 20px;
+      border-radius: 18px;
+      align-self: flex-start;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .typing-indicator span {
+      height: 10px;
+      width: 10px;
+      float: left;
+      margin: 0 2px;
+      background-color: var(--gray);
+      display: block;
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    .typing-indicator span:nth-of-type(1) {
+      animation: typing 1s infinite;
+    }
+
+    .typing-indicator span:nth-of-type(2) {
+      animation: typing 1s 0.33s infinite;
+    }
+
+    .typing-indicator span:nth-of-type(3) {
+      animation: typing 1s 0.66s infinite;
+    }
+
+    @keyframes typing {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .roadmap-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .step {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .step:hover {
+      transform: translateY(-5px) rotate(1deg);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .step-header {
+      padding: 20px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .step-number {
+      background: rgba(255, 255, 255, 0.2);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .step-title {
+      flex: 1;
+      margin-left: 15px;
+      font-weight: 600;
+    }
+
+    .step-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .step-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .step-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+
+    .step-body {
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    .step-content {
+      padding: 20px;
+      color: var(--dark);
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+
+    .step.expanded .step-body {
+      max-height: 500px;
+    }
+
+    .empty-roadmap {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--gray);
+    }
+
+    .empty-roadmap i {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      opacity: 0.3;
+    }
+
+    .empty-roadmap p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .progress-container {
+      height: 8px;
+      background: var(--light);
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(to right, var(--success), var(--primary));
+      border-radius: 4px;
+      width: 0%;
+      transition: width 1s ease;
+    }
+
+    .suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .suggestion-pill {
+      background: rgba(67, 97, 238, 0.1);
+      color: var(--primary);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .suggestion-pill:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      margin-top: 50px;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .floating {
+      animation: float 5s ease-in-out infinite;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+      
+      .roadmap-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .input-group {
+        flex-direction: column;
+      }
+      
+      .msg {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-rocket logo-icon floating"></i>
+          <h1>CareerPath <span style="font-weight: 300;">Pro</span></h1>
+        </div>
+        <div class="user-section">
+          <div class="user-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2 class="card-title"><i class="fas fa-user-graduate"></i> Welcome to Your Career Journey</h2>
+      <p>Enter your name to get started with personalized career guidance and roadmap creation.</p>
+      
+      <div class="input-group">
+        <input id="username" type="text" placeholder="Enter your name" />
+        <button class="btn btn-primary" onclick="loadRoadmap()">
+          <i class="fas fa-sync-alt"></i> Load My Roadmap
+        </button>
+        <button class="btn btn-danger" onclick="clearRoadmap()">
+          <i class="fas fa-trash-alt"></i> Clear Roadmap
+        </button>
+      </div>
+      
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title"><i class="fas fa-comments"></i> Career Guidance Assistant</h2>
+      <p>Ask any career-related question and get step-by-step guidance for your professional journey.</p>
+      
+      <div id="chat" aria-live="polite"></div>
+      
+      <div class="typing-indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <div class="input-group">
+        <input id="query" type="text" placeholder="Ask (e.g. how to become a data scientist, skills needed for digital marketing)" 
+               onkeypress="if(event.key === 'Enter') sendQuery()" />
+        <button class="btn btn-primary" onclick="sendQuery()">
+          <i class="fas fa-paper-plane"></i> Ask
+        </button>
+      </div>
+      
+      <div class="suggestions">
+        <div class="suggestion-pill" onclick="insertSuggestion('How to become a software engineer?')">Software Engineer</div>
+        <div class="suggestion-pill" onclick="insertSuggestion('What skills are needed for digital marketing?')">Digital Marketing</div>
+        <div class="suggestion-pill" onclick="insertSuggestion('Career path to become a data scientist')">Data Science</div>
+        <div class="suggestion-pill" onclick="insertSuggestion('How to start a career in UX design?')">UX Design</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title"><i class="fas fa-road"></i> My Career Roadmap</h2>
+      <p>Your personalized career development plan will appear here. Each step contains detailed guidance.</p>
+      
+      <div id="roadmap" class="roadmap-container">
+        <div class="empty-roadmap">
+          <i class="fas fa-map-marked-alt"></i>
+          <p>Your career roadmap is empty. Start by asking a question above!</p>
+          <button class="btn btn-primary" onclick="document.getElementById('query').focus()">
+            <i class="fas fa-comment"></i> Ask a Question
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>CareerPath Pro © 2023 | AI-Powered Career Guidance Platform</p>
+    </div>
+  </footer>
+
+  <script>
+    // DOM elements
+    const chatElement = document.getElementById("chat");
+    const roadmapElement = document.getElementById("roadmap");
+    const typingIndicator = document.querySelector(".typing-indicator");
+    const progressBar = document.getElementById("progress-bar");
+    
+    // Example messages for first-time users
+    const welcomeMessages = [
+      "Hello! I'm your Career Guidance Assistant. How can I help you today?",
+      "You can ask me about career paths, required skills, education options, or job search strategies.",
+      "Try asking something like 'How to become a project manager' or 'What skills do I need for web development'"
+    ];
+    
+    // Initialize chat for new users
+    function initializeChat() {
+      const username = document.getElementById("username").value.trim();
+      if (username && !sessionStorage.getItem('chatInitialized')) {
+        // Add welcome messages with delay
+        welcomeMessages.forEach((msg, i) => {
+          setTimeout(() => {
+            addMessage(msg, 'bot');
+          }, 1000 + (i * 2000));
+        });
+        
+        sessionStorage.setItem('chatInitialized', 'true');
+      }
+    }
+    
+    // Add message to chat
+    function addMessage(text, sender) {
+      const messageDiv = document.createElement("div");
+      messageDiv.classList.add("msg", sender);
+      messageDiv.innerHTML = `<b>${sender === 'user' ? 'You' : 'Career Assistant'}:</b> ${escapeHtml(text)}`;
+      chatElement.appendChild(messageDiv);
+      chatElement.scrollTop = chatElement.scrollHeight;
+    }
+    
+    // Show/hide typing indicator
+    function setTyping(visible) {
+      typingIndicator.style.display = visible ? 'flex' : 'none';
+      chatElement.scrollTop = chatElement.scrollHeight;
+    }
+    
+    // Insert suggestion into query input
+    function insertSuggestion(text) {
+      document.getElementById("query").value = text;
+      document.getElementById("query").focus();
+    }
+    
+    // Update progress bar based on roadmap steps
+    function updateProgressBar(stepCount) {
+      const maxSteps = 5; // Consider 5 steps as "complete" roadmap
+      const percentage = Math.min((stepCount / maxSteps) * 100, 100);
+      progressBar.style.width = `${percentage}%`;
+    }
+    
+    // Send query to backend
+    async function sendQuery() {
+      const username = document.getElementById("username").value.trim();
+      const query = document.getElementById("query").value.trim();
+      
+      if (!username) {
+        alert("Please enter your name first");
+        return;
+      }
+      
+      if (!query) {
+        alert("Please enter a question");
+        return;
+      }
+      
+      addMessage(query, 'user');
+      document.getElementById("query").value = "";
+      setTyping(true);
+      
+      try {
+        const res = await fetch("/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, query })
+        });
+        
+        if (!res.ok) {
+          throw new Error(`Server error: ${res.status}`);
+        }
+        
+        const data = await res.json();
+        setTimeout(() => {
+          setTyping(false);
+          addMessage(data.advice, 'bot');
+          loadRoadmap();
+        }, 1000);
+        
+      } catch (error) {
+        setTyping(false);
+        addMessage("Sorry, I'm having trouble connecting to the career guidance service. Please try again later.", 'bot');
+        console.error("Error:", error);
+      }
+    }
+    
+    // Load user's roadmap
+    async function loadRoadmap() {
+      const username = document.getElementById("username").value.trim();
+      if (!username) return;
+      
+      try {
+        const res = await fetch(`/roadmap/${encodeURIComponent(username)}`);
+        if (!res.ok) return;
+        
+        const data = await res.json();
+        renderRoadmap(data.steps);
+        updateProgressBar(data.steps.length);
+      } catch (error) {
+        console.error("Error loading roadmap:", error);
+      }
+    }
+    
+    // Render roadmap steps
+    function renderRoadmap(steps) {
+      if (!steps || steps.length === 0) {
+        roadmapElement.innerHTML = `
+          <div class="empty-roadmap">
+            <i class="fas fa-map-marked-alt"></i>
+            <p>Your career roadmap is empty. Start by asking a question above!</p>
+            <button class="btn btn-primary" onclick="document.getElementById('query').focus()">
+              <i class="fas fa-comment"></i> Ask a Question
+            </button>
+          </div>
+        `;
+        return;
+      }
+      
+      roadmapElement.innerHTML = "";
+      steps.forEach((step, i) => {
+        const stepElement = document.createElement("div");
+        stepElement.classList.add("step");
+        stepElement.innerHTML = `
+          <div class="step-header" onclick="toggleStep(${i})">
+            <div class="step-number">${i+1}</div>
+            <div class="step-title">${escapeHtml(step.title)}</div>
+            <div class="step-actions">
+              <button class="step-btn" onclick="event.stopPropagation();editStep(${i})">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="step-btn" onclick="event.stopPropagation();deleteStep(${i})">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-content">${escapeHtml(step.advice)}</div>
+          </div>
+        `;
+        roadmapElement.appendChild(stepElement);
+      });
+    }
+    
+    // Toggle step expansion
+    function toggleStep(index) {
+      const steps = document.querySelectorAll(".step");
+      if (steps[index].classList.contains("expanded")) {
+        steps[index].classList.remove("expanded");
+      } else {
+        steps[index].classList.add("expanded");
+      }
+    }
+    
+    // Edit step (placeholder for future functionality)
+    function editStep(index) {
+      alert("Edit functionality will be implemented in a future version.");
+    }
+    
+    // Delete step (placeholder for future functionality)
+    function deleteStep(index) {
+      if (confirm("Are you sure you want to delete this step? This action cannot be undone.")) {
+        alert("Delete functionality will be implemented in a future version.");
+      }
+    }
+    
+    // Clear roadmap
+    async function clearRoadmap() {
+      const username = document.getElementById("username").value.trim();
+      if (!username) {
+        alert("Please enter your name first");
+        return;
+      }
+      
+      if (!confirm(`Are you sure you want to clear the roadmap for ${username}? This cannot be undone.`)) {
+        return;
+      }
+      
+      try {
+        const res = await fetch("/clear", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username })
+        });
+        
+        if (res.ok) {
+          loadRoadmap();
+          addMessage("Your roadmap has been cleared. Start building a new one by asking questions!", 'bot');
+          updateProgressBar(0);
+        } else {
+          alert("Failed to clear roadmap");
+        }
+      } catch (error) {
+        console.error("Error clearing roadmap:", error);
+        alert("Error clearing roadmap");
+      }
+    }
+    
+    // Utility function to escape HTML
+    function escapeHtml(unsafe) {
+      if (unsafe == null) return "";
+      return unsafe
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+    
+    // Initialize when page loads
+    document.addEventListener("DOMContentLoaded", function() {
+      // Focus on username input
+      document.getElementById("username").focus();
+      
+      // Load roadmap if username exists in storage
+      const savedUsername = localStorage.getItem("careerUsername");
+      if (savedUsername) {
+        document.getElementById("username").value = savedUsername;
+        loadRoadmap();
+      }
+      
+      // Save username when changed
+      document.getElementById("username").addEventListener("blur", function() {
+        if (this.value.trim()) {
+          localStorage.setItem("careerUsername", this.value.trim());
+          initializeChat();
+        }
+      });
+      
+      // Allow Enter key in username to load roadmap
+      document.getElementById("username").addEventListener("keypress", function(e) {
+        if (e.key === "Enter") loadRoadmap();
+      });
+    });
+  </script>
+</body>
+</html>

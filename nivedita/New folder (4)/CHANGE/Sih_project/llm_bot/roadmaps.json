@@ -1,0 +1,374 @@
+{
+  "users": {
+    "hello": {
+      "steps": [
+        {
+          "query": "hello",
+          "advice": "Advice: Start with basics related to 'hello'."
+        },
+        {
+          "query": "how to study python",
+          "advice": "Advice: Start with basics related to 'how to study python'."
+        }
+      ]
+    },
+    "dosa": {
+      "steps": [
+        {
+          "query": "heloo",
+          "advice": "Advice: Start with basics related to 'heloo'."
+        }
+      ]
+    },
+    "idli": {
+      "steps": [
+        {
+          "query": "idli",
+          "advice": "Advice: Start with basics related to 'idli'."
+        }
+      ]
+    },
+    "vada": {
+      "steps": [
+        {
+          "query": "vada",
+          "advice": "Advice: Start with basics related to 'vada'."
+        },
+        {
+          "query": "paav",
+          "advice": "Advice: Start with basics related to 'paav'."
+        },
+        {
+          "query": "smabhar",
+          "advice": "Advice: Start with basics related to 'smabhar'."
+        }
+      ]
+    },
+    "kush": {
+      "steps": [
+        {
+          "query": "hello",
+          "advice": "Advice: Start with basics related to 'hello'."
+        }
+      ]
+    },
+    "ks": {
+      "steps": [
+        {
+          "title": "Space Explorer Career Path",
+          "advice": "To become an astronaut, follow these steps: 1. Education in STEM..."
+        }
+      ]
+    }
+  },
+  "don2": [
+    {
+      "title": "Electronics Career Path, Design, Development, Engineering",
+      "advice": "[No advice returned]"
+    },
+    {
+      "title": "Electronics Career, Design, Development, Engineering",
+      "advice": "[No advice returned]"
+    }
+  ],
+  "don": [
+    {
+      "title": "Pursue CS Career",
+      "advice": {
+        "Step 1": "Learn Programming Fundamentals (Python, Java, C++)",
+        "Step 2": "Get Familiar with Data Structures and Algorithms",
+        "Step 3": "Explore Web Development (HTML, CSS, JavaScript)",
+        "Step 4": "Dive into Machine Learning and Deep Learning",
+        "Step 5": "Build Personal Projects to Showcase Skills",
+        "Step 6": "Participate in Coding Challenges (HackerRank, LeetCode)",
+        "Step 7": "Network with Professionals in the Industry",
+        "Step 8": "Pursue Certifications (CompTIA A+, Cisco CCNA)",
+        "Step 9": "Stay Updated with Industry Trends and Technologies"
+      }
+    },
+    {
+      "title": "Pursue CS Career",
+      "advice": {
+        "step1": "Get Bachelor's degree in Computer Science or related field",
+        "step2": "Gain practical experience through internships and projects",
+        "step3": "Learn programming languages (Python, Java, C++, etc.)",
+        "step4": "Develop problem-solving skills and algorithmic thinking",
+        "step5": "Pursue certifications (AWS, Google Cloud, Microsoft Azure)",
+        "step6": "Network with professionals in the industry",
+        "step7": "Stay updated with the latest technologies and trends"
+      }
+    },
+    {
+      "title": "Knowledge, Pursuing, Computer, Projects",
+      "advice": "{\n  \"title\": \"Pursuing Computer Science, Programming, Coding, Data Analysis\",\n  \"advice\": \"1. Gain foundational knowledge in computer science concepts: algorithms, data structures, software engineering.\n2. Choose a specialization: artificial intelligence, machine learning, cybersecurity, or web development.\n3. Build a strong portfolio by contributing to open-source projects or personal coding projects.\n4. Network with professionals and attend industry events to learn about job opportunities.\n5. Develop essential skills: problem-solving, communication, teamwork, and adaptability.\n6. Consider pursuing higher education (BS/MS) for advanced knowledge and career advancement.\n7. Stay updated with industry trends and advancements through continuous learning and certifications.\""
+    }
+  ],
+  "kush": [
+    {
+      "title": "Investment Banking Career Path, Finance Skills, MBA",
+      "advice": "Earn a bachelor's degree in finance or economics. Gain relevant work experience through internships or entry-level positions at investment banks or financial institutions. Develop essential skills such as financial modeling, data analysis, and communication. Pursue an MBA from a top-tier business school to gain advanced knowledge and networking opportunities. Consider obtaining professional certifications like the CFA designation. Network with professionals in the industry and stay up-to-date on market trends and developments."
+    },
+    {
+      "title": "Board, Leadership, Industry, Strategic",
+      "advice": "{\n  \"title\": \"Board of Director Career Path, Strategic Leadership, Corporate Governance\",\n  \"advice\": {\n    \"Step 1: Gain Relevant Experience\": Build a strong track record in your industry through senior leadership roles or executive positions.\n    \"Step 2: Develop Key Skills\": Acquire skills in strategic planning, risk management, financial analysis, and communication.\n    \"Step 3: Network and Build Relationships\": Establish relationships with other board members, CEOs, and key stakeholders in your industry.\n    \"Step 4: Stay Current with Industry Trends\": Attend conferences, read industry publications, and participate in online forums to stay up-to-date on the latest developments.\n    \"Step 5: Pursue Board-Specific Training\": Consider taking courses or earning certifications that focus on corporate governance, financial reporting, and audit committees.\n    \"Step 6: Leverage Your Network\": Use your professional network to get referrals or recommendations for board opportunities.\n    \"Step 7: Prepare a Strong Application Package\": Develop a compelling personal statement, resume, and references that highlight your relevant experience and skills.\n    \"Step 8: Participate in Board Assessments\": Many organizations offer assessments to help identify potential candidates for the board. Take advantage of these opportunities to demonstrate your readiness.\n    \"Step 9: Demonstrate Strong Leadership Skills\": Show a track record of effective leadership, strategic thinking, and collaboration.\n    \"Step 10: Stay Committed and Patient\": Becoming a board member takes time, dedication, and perseverance. Be prepared for a long-term commitment.\"\n  }\n}"
+    },
+    {
+      "title": "Data, Science, Statistics, Like",
+      "advice": "{\n  \"title\": \"Become a Data Scientist, Machine Learning, Statistics, Python, R\",\n  \"advice\": \"Step 1: Learn programming skills - Python and/or R. \n Start with Python and practice data manipulation using libraries like Pandas and NumPy. \n Move to machine learning with Scikit-learn, TensorFlow or Keras.\n Learn statistics and mathematical concepts from calculus, linear algebra, probability theory.\n\n Step 2: Build a strong foundation in statistics and math - \n Take online courses or attend classes on regression, hypothesis testing, confidence intervals, optimization techniques.\n Understand time series analysis, spatial analysis, clustering, dimensionality reduction.\n\n Step 3: Get hands-on experience with data science tools and technologies - \n Work with datasets to practice data cleaning, feature engineering, model training, and model evaluation.\n Learn deep learning concepts like convolutional neural networks (CNNs), recurrent neural networks (RNNs).\n Understand natural language processing (NLP) techniques for text analysis.\n\n Step 4: Pursue a graduate degree in Data Science or related field - \n Consider pursuing an MS in Data Science, Machine Learning Engineering, or Statistics.\n Or look into online certifications like Certified Data Scientist (CDS) or Certified Analytics Professional (CAP).\n\n Step 5: Network and stay updated with industry trends - \n Join data science communities on platforms like Kaggle, Reddit's r/MachineLearning and r/DataScience.\n Attend conferences, meetups, or workshops to learn about new tools, techniques, and breakthroughs.\n\n Step 6: Prepare for a career in data science - \n Update your resume to highlight relevant skills and experience.\n Practice whiteboarding problems and prepare for common data science interview questions.\""
+    },
+    {
+      "title": "Learn Basics",
+      "advice": "Start with Python, NumPy, Pandas, Scikit-Learn"
+    },
+    {
+      "title": "Math Foundations",
+      "advice": "Master Linear Algebra, Calculus, Probability"
+    },
+    {
+      "title": "Programming Practice",
+      "advice": "Build 5-10 projects using Kaggle datasets"
+    },
+    {
+      "title": "Deep Learning Intro",
+      "advice": "Explore TensorFlow, Keras, or PyTorch"
+    },
+    {
+      "title": "Specialization Choice",
+      "advice": "Decide on a specific domain (e.g., NLP, Computer Vision)"
+    },
+    {
+      "title": "Advanced Topics",
+      "advice": "Study Generative Models, Reinforcement Learning"
+    }
+  ],
+  "ks": [
+    {
+      "title": "Coding, Programming, Structures, Algorithms",
+      "advice": "{\n  \"title\": \"Becoming a Software Engineer, Programming Skills, Coding, Data Structures, Algorithms, Web Development\",\n  \"advice\": \"\"\"\n    Step 1: Learn a programming language (e.g., Python, Java, C++).\n    Step 2: Familiarize yourself with data structures and algorithms.\n    Step 3: Gain experience through online coding challenges (e.g., LeetCode, HackerRank).\n    Step 4: Build personal projects to apply your skills.\n    Step 5: Consider formal education or a bootcamp for advanced training.\n    Step 6: Develop a strong portfolio showcasing your work.\n    Step 7: Network with professionals in the field and join online communities.\n    Step 8: Prepare for software engineering interviews (e.g., whiteboarding, coding tests).\n    \"\"\"\n}"
+    }
+  ],
+  "key": [
+    {
+      "title": "Step 1",
+      "advice": "Learn basics of math and programming\nStart with linear algebra, calculus, and Python."
+    },
+    {
+      "title": "Step 2",
+      "advice": "Dive into AI/ML fundamentals\nStudy supervised and unsupervised learning, neural networks, and deep learning."
+    },
+    {
+      "title": "Step 3",
+      "advice": "Explore advanced topics\nCover reinforcement learning, natural language processing, and computer vision."
+    },
+    {
+      "title": "Step 4",
+      "advice": "Practice with projects and datasets\nWork on Kaggle competitions, TensorFlow tutorials, or PyTorch examples."
+    },
+    {
+      "title": "Step 5",
+      "advice": "Stay updated with industry trends\nAttend conferences, read research papers, and follow AI/ML blogs."
+    },
+    {
+      "title": "Step 6",
+      "advice": "Prepare for a career\nUpdate your resume, build a portfolio, and network with professionals in the field."
+    }
+  ],
+  "qw": [
+    {
+      "title": "Step 1",
+      "advice": "Earn Bachelor's in finance or related field"
+    },
+    {
+      "title": "Step 2",
+      "advice": "Gain 1-2 years of entry-level experience"
+    },
+    {
+      "title": "Step 3",
+      "advice": "Obtain CFP certification"
+    },
+    {
+      "title": "Step 4",
+      "advice": "Develop industry knowledge and network"
+    },
+    {
+      "title": "Step 5",
+      "advice": "Build portfolio management skills"
+    },
+    {
+      "title": "Step 6",
+      "advice": "Pursue advanced certifications (e.g. CFA)"
+    },
+    {
+      "title": "Step 7",
+      "advice": "Practice client relationships and case studies"
+    },
+    {
+      "title": "Step 8",
+      "advice": "Prepare for licensing exams and professional development"
+    }
+  ],
+  "kusha": [
+    {
+      "title": "Step 1",
+      "advice": "{\n  \"title\": \"Becoming a Data Scientist\",\n  \"advice\": \"Step 1: Learn Python and R programming languages\\nMaster basic statistical concepts, linear algebra, and calculus.\\nStep 2: Get familiar with data analysis tools and techniques (e.g., Pandas, NumPy, Matplotlib)\\nPractice with public datasets to hone your skills.\\nStep 3: Dive into machine learning libraries like Scikit-learn or TensorFlow\\nDevelop predictive models using supervised and unsupervised learning.\\nStep 4: Explore advanced topics such as deep learning, natural language processing, and computer vision\\nStay up-to-date with industry trends and new technologies.\\nStep 5: Participate in data science competitions and projects to showcase your skills\\nNetwork with professionals in the field through meetups, conferences, or online forums.\\nStep 6: Pursue a graduate degree (optional) or certifications like Certified Data Scientist (CDS)\\nEnhance your resume and prepare for job applications.\\nStep 7: Prepare for common data scientist interview questions and whiteboarding exercises\\nPractice explaining complex concepts in simple terms to showcase your communication skills.\""
+    }
+  ],
+  "kushaa": [
+    {
+      "title": "Step 1",
+      "advice": "Learn Statistics and Math Fundamentals\nMaster probability, linear algebra, calculus, and statistics concepts."
+    },
+    {
+      "title": "Step 2",
+      "advice": "Dive into Data Science Tools\nExplore popular tools like Python, R, SQL, and machine learning libraries."
+    },
+    {
+      "title": "Step 3",
+      "advice": "Acquire Domain Knowledge\nStudy data science applications in your chosen field (e.g., healthcare, finance)."
+    },
+    {
+      "title": "Step 4",
+      "advice": "Develop Programming Skills\nMaster Python programming with libraries like Pandas, NumPy, and scikit-learn."
+    },
+    {
+      "title": "Step 5",
+      "advice": "Practice with Projects\nWork on real-world projects to apply data science concepts."
+    },
+    {
+      "title": "Step 6",
+      "advice": "Learn Advanced Techniques\nStudy deep learning, natural language processing, and computer vision."
+    },
+    {
+      "title": "Step 7",
+      "advice": "Network and Join Communities\nAttend conferences, meetups, and join online forums like Kaggle and Reddit."
+    },
+    {
+      "title": "Step 8",
+      "advice": "Prepare for Career\nUpdate resume, build a portfolio, and practice whiteboarding questions."
+    }
+  ],
+  "hyper": [
+    {
+      "title": "Step 1",
+      "advice": "{\n  \"title\": \"AI/ML Study Roadmap\",\n  \"advice\": \"\"\""
+    },
+    {
+      "title": "Step 2",
+      "advice": "Learn Basics - Start with Python, Math, and Linear Algebra. Online courses like Coursera's Machine Learning course are great resources."
+    },
+    {
+      "title": "Step 3",
+      "advice": "Build Foundation - Familiarize yourself with popular AI libraries (TensorFlow, PyTorch) and frameworks (Keras). Practice implementing algorithms on datasets like Kaggle."
+    },
+    {
+      "title": "Step 4",
+      "advice": "Dive into Intermediates - Study supervised and unsupervised learning, deep learning, and neural networks. Explore more advanced topics like Reinforcement Learning and Transfer Learning."
+    },
+    {
+      "title": "Step 5",
+      "advice": "Experimentation and Practice - Work on personal projects or participate in hackathons to apply theoretical knowledge. Use platforms like GitHub to showcase your work."
+    },
+    {
+      "title": "Step 6",
+      "advice": "Career Prep - Develop a strong portfolio, update your resume, and practice whiteboarding exercises to improve problem-solving skills.\n  \"\"\"\n}"
+    }
+  ],
+  "Ira": [
+    {
+      "title": "Step 1",
+      "advice": "{\n  \"title\": \"Data Science Study Plan\",\n  \"advice\": \""
+    },
+    {
+      "title": "Step 2",
+      "advice": "Learn Basics - Start with Python, R, or SQL programming fundamentals. Familiarize yourself with data types and visualization libraries like Matplotlib, Seaborn, or Plotly."
+    },
+    {
+      "title": "Step 3",
+      "advice": "Statistics and Machine Learning - Understand statistical concepts like regression, hypothesis testing, and probability theory. Study supervised and unsupervised machine learning algorithms, including linear regression, decision trees, clustering, and neural networks."
+    },
+    {
+      "title": "Step 4",
+      "advice": "Data Preprocessing and Visualization - Learn techniques for data cleaning, feature engineering, and data visualization using tools like Pandas, NumPy, Scikit-learn, or Matplotlib."
+    },
+    {
+      "title": "Step 5",
+      "advice": "Advanced Topics - Dive into advanced topics like deep learning, natural language processing, recommender systems, and time series analysis. Study libraries like TensorFlow, Keras, or PyTorch for deep learning."
+    },
+    {
+      "title": "Step 6",
+      "advice": "Practice and Projects - Work on practical projects to apply your skills, using datasets from Kaggle, UCI Machine Learning Repository, or other sources. Participate in data science competitions to test your abilities."
+    },
+    {
+      "title": "Step 7",
+      "advice": "Career Preparation - Update your resume, build a personal website or blog, and create a strong online presence. Network with professionals in the field and attend industry events to learn about job opportunities.\n\""
+    }
+  ],
+  "Halwa": [
+    {
+      "title": "Step 1",
+      "advice": "Learn basic accounting concepts, such as assets, liabilities, and equity."
+    },
+    {
+      "title": "Step 2",
+      "advice": "Study financial statements, including balance sheets, income statements, and cash flow statements."
+    },
+    {
+      "title": "Step 3",
+      "advice": "Explore financial markets, instruments, and institutions, such as stocks, bonds, and banks."
+    },
+    {
+      "title": "Step 4",
+      "advice": "Understand derivatives, risk management, and investment strategies."
+    },
+    {
+      "title": "Step 5",
+      "advice": "Practice with online resources, such as financial modeling and analysis tools."
+    },
+    {
+      "title": "Step 6",
+      "advice": "Read industry publications and books to stay up-to-date on finance news and trends."
+    },
+    {
+      "title": "Step 7",
+      "advice": "Join professional networks and attend events to connect with finance professionals."
+    },
+    {
+      "title": "Step 8",
+      "advice": "Pursue certifications, such as CFA or FRM, for advanced career opportunities."
+    }
+  ],
+  "user": [
+    {
+      "title": "Step 1",
+      "advice": "Learn ML Fundamentals\nStudy supervised and unsupervised learning, neural networks, and deep learning."
+    },
+    {
+      "title": "Step 2",
+      "advice": "Get Hands-on Experience\nUse libraries like TensorFlow, PyTorch, or Keras for projects and exercises."
+    },
+    {
+      "title": "Step 3",
+      "advice": "Dive into Specializations\nExplore computer vision, natural language processing, or reinforcement learning to find your niche."
+    },
+    {
+      "title": "Step 4",
+      "advice": "Practice Regularly\nParticipate in competitions, work on personal projects, and contribute to open-source ML initiatives."
+    },
+    {
+      "title": "Step 5",
+      "advice": "Build a Portfolio\nCreate a portfolio showcasing your ML skills and experience."
+    },
+    {
+      "title": "Step 6",
+      "advice": "Update Your Skills\nStay current with industry trends and advances by attending workshops, webinars, or conferences."
+    },
+    {
+      "title": "Step 7",
+      "advice": "Network and Join Communities\nConnect with professionals in the field through online forums, social media groups, or attend meetups."
+    },
+    {
+      "title": "Step 8",
+      "advice": "Pursue Further Education\nConsider a master's degree or certifications to enhance your career prospects."
+    }
+  ]
+}

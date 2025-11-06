@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerPath Pro | AI-Powered Career Guidance</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4361ee;
+      --secondary: #3a0ca3;
+      --accent: #f72585;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --success: #4cc9f0;
+      --warning: #ffd166;
+      --danger: #ef476f;
+      --gray: #6c757d;
+      --transition: all 0.3s ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+    header {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      padding: 20px 0;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-content { display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+
+    .logo { display: flex; align-items: center; gap: 15px; }
+    .logo-icon { font-size: 2.5rem; animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+    .logo h1 { font-size: 2.2rem; font-weight: 700; }
+
+    .user-avatar { width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer; transition: var(--transition); }
+    .user-avatar:hover { transform: rotate(15deg); background: rgba(255,255,255,0.3); }
+
+    .card {
+      background: white; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      padding: 25px; margin-bottom: 25px; transition: var(--transition);
+      border: 1px solid rgba(255,255,255,0.5); backdrop-filter: blur(10px);
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); }
+
+    .card-title { font-size: 1.5rem; margin-bottom: 20px; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+
+    .input-group { display:flex; gap:10px; margin-bottom:20px; }
+
+    input[type="text"] {
+      flex: 1; padding: 15px 20px; border: none; border-radius: 12px; background: var(--light);
+      font-size: 1rem; transition: var(--transition); box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    }
+    input[type="text"]:focus { outline: none; box-shadow: 0 0 0 3px rgba(67,97,238,0.3); }
+
+    .btn { padding: 15px 25px; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; transition: var(--transition); display:inline-flex; align-items:center; gap:8px; }
+    .btn-primary { background: var(--primary); color:white; } .btn-primary:hover { background: var(--secondary); transform: translateY(-2px); }
+    .btn-danger { background: var(--danger); color:white; } .btn-danger:hover { background:#d8345f; transform: translateY(-2px); }
+
+    #chat { height: 300px; overflow-y: auto; padding: 20px; background: var(--light); border-radius: 16px; margin-bottom: 20px; display:flex; flex-direction:column; gap:15px; }
+    .msg { max-width: 80%; padding: 15px 20px; border-radius: 18px; animation: fadeIn 0.5s ease; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:translateY(0);} }
+    .user { background: var(--primary); color:white; align-self:flex-end; border-bottom-right-radius:5px; }
+    .bot { background: white; color:var(--dark); align-self:flex-start; border-bottom-left-radius:5px; box-shadow:0 4px 15px rgba(0,0,0,0.05); }
+
+    .typing-indicator { display:none; background:white; padding:15px 20px; border-radius:18px; align-self:flex-start; margin-bottom:15px; box-shadow:0 4px 15px rgba(0,0,0,0.05); }
+    .typing-indicator span { height:10px; width:10px; margin:0 2px; background-color:var(--gray); display:block; border-radius:50%; opacity:0.4; }
+    .typing-indicator span:nth-of-type(1){animation:typing 1s infinite;} .typing-indicator span:nth-of-type(2){animation:typing 1s .33s infinite;} .typing-indicator span:nth-of-type(3){animation:typing 1s .66s infinite;}
+    @keyframes typing {0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);} }
+
+    .roadmap-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px,1fr)); gap:25px; margin-top:20px; }
+    .step { background:white; border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.08); transition:var(--transition); position:relative; }
+    .step-header { padding:20px; background: linear-gradient(to right, var(--primary), var(--secondary)); color:white; display:flex; justify-content:space-between; align-items:center; cursor:pointer; }
+    .step-number { background: rgba(255,255,255,0.2); width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold; }
+    .step-title { flex:1; margin-left:15px; font-weight:600; }
+    .step-body { padding:0; max-height:0; overflow:hidden; transition: max-height 0.5s ease; }
+    .step.expanded .step-body { max-height:500px; }
+    .step-content { padding:20px; color:var(--dark); white-space:pre-wrap; line-height:1.6; }
+
+    .progress-container { height:8px; background: var(--light); border-radius:4px; overflow:hidden; margin:20px 0; }
+    .progress-bar { height:100%; background: linear-gradient(to right, var(--success), var(--primary)); border-radius:4px; width:0%; transition: width 0.5s ease; }
+
+    footer { text-align:center; padding:30px 0; margin-top:50px; color:var(--gray); font-size:0.9rem; }
+
+    @media (max-width:768px) {
+      .header-content { flex-direction:column; text-align:center; gap:20px; }
+      .roadmap-container { grid-template-columns:1fr; }
+      .input-group { flex-direction:column; }
+      .msg { max-width:90%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-rocket logo-icon"></i>
+          <h1>CareerPath <span style="font-weight:300;">Pro</span></h1>
+        </div>
+        <div class="user-avatar"><i class="fas fa-user"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2 class="card-title"><i class="fas fa-user-graduate"></i> Welcome to Your Career Journey</h2>
+      <div class="input-group">
+        <input id="username" type="text" placeholder="Enter your name" />
+        <button class="btn btn-primary" onclick="loadRoadmap()"><i class="fas fa-sync-alt"></i> Load My Roadmap</button>
+        <button class="btn btn-danger" onclick="clearRoadmap()"><i class="fas fa-trash-alt"></i> Clear Roadmap</button>
+      </div>
+
+      <label style="display:flex;align-items:center;gap:8px;margin-top:10px;">
+        <input type="checkbox" id="appendMode">
+        Append new steps instead of replacing roadmap
+      </label>
+
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title"><i class="fas fa-comments"></i> Career Guidance Assistant</h2>
+      <div id="chat"></div>
+      <div class="typing-indicator"><span></span><span></span><span></span></div>
+      <div class="input-group">
+        <input id="query" type="text" placeholder="Ask about a career path..." onkeypress="if(event.key==='Enter') sendQuery()" />
+        <button class="btn btn-primary" onclick="sendQuery()"><i class="fas fa-paper-plane"></i> Ask</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title"><i class="fas fa-road"></i> My Career Roadmap</h2>
+      <div id="roadmap" class="roadmap-container"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container"><p>CareerPath Pro © 2023</p></div>
+  </footer>
+
+  <script>
+    const chatElement = document.getElementById("chat");
+    const roadmapElement = document.getElementById("roadmap");
+    const typingIndicator = document.querySelector(".typing-indicator");
+    const progressBar = document.getElementById("progress-bar");
+
+    // Utility: escape HTML to avoid injection
+    function escapeHtml(str) {
+      if (!str && str !== 0) return "";
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function addMessage(text, sender) {
+      const div = document.createElement("div");
+      div.classList.add("msg", sender === "bot" ? "bot" : sender);
+      div.innerHTML = `<b>${sender === 'user' ? 'You' : 'Career Assistant'}:</b> ${escapeHtml(text)}`;
+      chatElement.appendChild(div);
+      chatElement.scrollTop = chatElement.scrollHeight;
+    }
+
+    function setTyping(visible) {
+      typingIndicator.style.display = visible ? 'flex' : 'none';
+      chatElement.scrollTop = chatElement.scrollHeight;
+    }
+
+    // Send query to backend; sends append toggle state too
+    async function sendQuery() {
+      const username = document.getElementById("username").value.trim();
+      const query = document.getElementById("query").value.trim();
+      const appendMode = document.getElementById("appendMode").checked;
+
+      if (!username) {
+        alert("Please enter your name first");
+        return;
+      }
+      if (!query) {
+        alert("Please enter a question");
+        return;
+      }
+
+      // Save username for next visits
+      localStorage.setItem("careerUsername", username);
+
+      addMessage(query, 'user');
+      document.getElementById("query").value = "";
+      setTyping(true);
+
+      try {
+        const res = await fetch("/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, query, append: appendMode })
+        });
+
+        if (!res.ok) throw new Error("Server error " + res.status);
+        const data = await res.json();
+        setTyping(false);
+
+        // Show assistant summary (if returned) + roadmap updated confirmation
+        if (data.summary) addMessage(data.summary, 'bot');
+        addMessage("Roadmap updated!", 'bot');
+
+        // Refresh roadmap UI
+        loadRoadmap();
+      } catch (err) {
+        setTyping(false);
+        addMessage("Sorry, I'm having trouble connecting to the career guidance service. Please try again later.", 'bot');
+        console.error(err);
+      }
+    }
+
+    // Render roadmap: each step is collapsible; step 1 auto expanded
+    function renderRoadmap(steps) {
+      if (!steps || steps.length === 0) {
+        roadmapElement.innerHTML = `<div class="empty-roadmap"><i class="fas fa-map-marked-alt"></i><p>Your career roadmap is empty. Start by asking a question above!</p></div>`;
+        updateProgress(0, 1);
+        return;
+      }
+
+      roadmapElement.innerHTML = "";
+      steps.forEach((step, i) => {
+        const div = document.createElement("div");
+        div.classList.add("step");
+        if (i === 0) div.classList.add("expanded"); // auto expand first
+        div.innerHTML = `
+          <div class="step-header" onclick="toggleStep(${i})">
+            <div class="step-number">${i+1}</div>
+            <div class="step-title">${escapeHtml(step.title || ("Step " + (i+1)))}</div>
+          </div>
+          <div class="step-body"><div class="step-content">${escapeHtml(step.advice || "")}</div></div>
+        `;
+        roadmapElement.appendChild(div);
+      });
+
+      // reset completed data attributes so progress starts fresh (user can expand to complete)
+      document.querySelectorAll(".step").forEach(s => { delete s.dataset.completed; });
+      updateProgress(0, steps.length);
+    }
+
+    // Accordion + progress tracking: track how many unique steps user opened
+    function toggleStep(index) {
+      const steps = document.querySelectorAll(".step");
+      steps.forEach((s, i) => {
+        if (i === index) {
+          s.classList.toggle("expanded");
+          // if newly expanded and not previously counted, mark completed and update
+          if (s.classList.contains("expanded") && !s.dataset.completed) {
+            s.dataset.completed = "true";
+          }
+        } else {
+          s.classList.remove("expanded");
+        }
+      });
+
+      // count how many have dataset.completed
+      const completed = Array.from(document.querySelectorAll(".step")).filter(s => s.dataset.completed === "true").length;
+      updateProgress(completed, steps.length);
+    }
+
+    function updateProgress(completed, total) {
+      const pct = total ? Math.min((completed / total) * 100, 100) : 0;
+      progressBar.style.width = pct + "%";
+    }
+
+    // Load roadmap for a username
+    async function loadRoadmap() {
+      const username = document.getElementById("username").value.trim();
+      if (!username) return;
+      try {
+        const res = await fetch(`/roadmap/${encodeURIComponent(username)}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        renderRoadmap(data.steps);
+      } catch (err) {
+        console.error("Error loading roadmap:", err);
+      }
+    }
+
+    // Clear roadmap
+    async function clearRoadmap() {
+      const username = document.getElementById("username").value.trim();
+      if (!username) {
+        alert("Please enter your name first");
+        return;
+      }
+      if (!confirm(`Are you sure you want to clear the roadmap for ${username}? This cannot be undone.`)) return;
+      try {
+        const res = await fetch("/clear", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username })
+        });
+        if (res.ok) {
+          roadmapElement.innerHTML = `<div class="empty-roadmap"><i class="fas fa-map-marked-alt"></i><p>Your career roadmap is empty. Start by asking a question above!</p></div>`;
+          updateProgress(0,1);
+          addMessage("Your roadmap has been cleared. Start building a new one by asking questions!", 'bot');
+        }
+      } catch (err) {
+        console.error("Error clearing roadmap:", err);
+        alert("Error clearing roadmap");
+      }
+    }
+
+    // --- UX: greeting on Enter in username + save username + focus query ---
+    document.addEventListener("DOMContentLoaded", function() {
+      // restore saved username if any
+      const savedUsername = localStorage.getItem("careerUsername");
+      if (savedUsername) {
+        document.getElementById("username").value = savedUsername;
+        loadRoadmap();
+      }
+
+      const nameInput = document.getElementById("username");
+      nameInput.addEventListener("blur", function() {
+        if (this.value.trim()) localStorage.setItem("careerUsername", this.value.trim());
+      });
+
+      nameInput.addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+          const name = this.value.trim();
+          if (!name) return;
+          localStorage.setItem("careerUsername", name);
+          // greet once per session
+          if (!sessionStorage.getItem("greeted")) {
+            addMessage(`Hi ${name}! How can I help you today?`, 'bot');
+            sessionStorage.setItem("greeted", "true");
+          }
+          // move focus to query input for quick typing
+          document.getElementById("query").focus();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - CareerQuest</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="careers.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="nav-logo">⚡</span>
+        <span class="nav-title">CareerQuest</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="chat.html" class="nav-link">AI Advisor</a></li>
+        <li><a href="roadmaps.html" class="nav-link">Roadmaps</a></li>
+        <li><a href="chatbot_roadmap.html" class="nav-link">Chatbot Roadmap</a></li>
+        <li><a href="careers.html" class="nav-link active">Careers</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Profile Header -->
+  <section class="profile-header" style="background: linear-gradient(135deg, #e8f7f2 0%, #fdf5e6 100%); padding: 100px 20px;">
+    <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2rem; text-align: center;">
+      <div style="flex-shrink: 0;">
+        <img src="assets/user-placeholder.jpg" alt="User Avatar" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      </div>
+      <div>
+        <h1 style="font-size: 2.3rem; font-weight: 800; margin-bottom: 0.5rem;">Welcome Back, John Doe 👋</h1>
+        <p style="color: #6b7280; font-size: 1rem; line-height: 1.6;">
+          Aspiring Full-Stack Developer | Passionate about AI & Data <br>
+          <span style="font-size: 0.9rem; color: #9ca3af;">Student • Intermediate • Joined: Feb 2025</span>
+        </p>
+        <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-primary">Edit Profile</button>
+          <button class="btn btn-outline">Logout</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile Stats -->
+  <section class="profile-stats" style="padding: 60px 20px; background: #fff;">
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; max-width: 1100px; margin: 0 auto;">
+      <div style="background: #fff; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); padding: 1.75rem 2rem; width: 320px; transition: 0.3s;">
+        <h3 style="font-weight: 700; color: #111827; margin-bottom: 0.75rem;">📘 Learning Progress</h3>
+        <p>Completed 5 of 8 roadmaps</p>
+      </div>
+
+      <div style="background: #fff; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); padding: 1.75rem 2rem; width: 320px; transition: 0.3s;">
+        <h3 style="font-weight: 700; color: #111827; margin-bottom: 0.75rem;">🏆 Achievements</h3>
+        <ul style="padding-left: 1.2rem; color: #374151;">
+          <li>Completed “Frontend Development” roadmap</li>
+          <li>Top 5% in Data Science Challenge</li>
+        </ul>
+      </div>
+
+      <div style="background: #fff; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); padding: 1.75rem 2rem; width: 320px; transition: 0.3s;">
+        <h3 style="font-weight: 700; color: #111827; margin-bottom: 0.75rem;">💼 Current Focus</h3>
+        <p style="color: #374151;">Improving backend architecture and AI project integration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Saved Roadmaps -->
+  <section class="saved-roadmaps" style="background: #f9fafb; padding: 90px 20px;">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <h2 style="font-size: 2rem; font-weight: 800; color: #111827; margin-bottom: 0.5rem;">Saved Roadmaps</h2>
+      <p style="color: #6b7280; font-size: 1rem;">Continue where you left off</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+      <div style="background: #fff; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 1.5rem; text-align: center;">
+        <h3 style="font-weight: 700; color: #111827; margin-bottom: 0.5rem;">Frontend Development</h3>
+        <p style="color: #4b5563;">Progress: <strong>70%</strong></p>
+        <div style="height: 8px; background: #e5e7eb; border-radius: 5px; overflow: hidden; margin-bottom: 1rem;">
+          <div style="height: 100%; background: #10b981; width: 70%;"></div>
+        </div>
+        <button class="btn btn-outline">Resume</button>
+      </div>
+
+      <div style="background: #fff; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 1.5rem; text-align: center;">
+        <h3 style="font-weight: 700; color: #111827; margin-bottom: 0.5rem;">Data Science</h3>
+        <p style="color: #4b5563;">Progress: <strong>45%</strong></p>
+        <div style="height: 8px; background: #e5e7eb; border-radius: 5px; overflow: hidden; margin-bottom: 1rem;">
+          <div style="height: 100%; background: #10b981; width: 45%;"></div>
+        </div>
+        <button class="btn btn-outline">Resume</button>
+      </div>
+
+      <div style="background: #fff; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 1.5rem; text-align: center;">
+        <h3 style="font-weight: 700; color: #111827; margin-bottom: 0.5rem;">Machine Learning</h3>
+        <p style="color: #4b5563;">Progress: <strong>20%</strong></p>
+        <div style="height: 8px; background: #e5e7eb; border-radius: 5px; overflow: hidden; margin-bottom: 1rem;">
+          <div style="height: 100%; background: #10b981; width: 20%;"></div>
+        </div>
+        <button class="btn btn-outline">Resume</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="theme.js"></script>
+  <script src="careers.js"></script>
+</body>
+</html>
